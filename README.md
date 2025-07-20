@@ -1,2 +1,0 @@
-# etudia-main
-Utilisateurs EtudIA
