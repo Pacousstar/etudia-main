@@ -1,32 +1,16 @@
 {
-  "version": 2,
-  "name": "etudia-main",
-  "rewrites": [
+  "name": "ÉtudIA - Assistant IA Éducatif",
+  "short_name": "ÉtudIA",
+  "description": "L'IA éducative pour l'Afrique",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1F2937",
+  "theme_color": "#FF6B35",
+  "icons": [
     {
-      "source": "/api/(.*)",
-      "destination": "https://etudia-africa-v4-1.onrender.com/api/$1"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/admin",
-      "destination": "https://adminetudia.gsnexpertises.com",
-      "permanent": false
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400"
-        }
-      ]
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
     }
   ]
 }
