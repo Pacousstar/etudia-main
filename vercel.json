@@ -1,44 +1,32 @@
 {
-  "name": "ÉtudIA - Assistant IA Éducatif pour l'Afrique",
-  "short_name": "ÉtudIA",
-  "description": "L'IA éducative révolutionnaire propulsée par DeepSeek R1",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#1F2937",
-  "theme_color": "#FF6B35",
-  "orientation": "portrait-primary",
-  "categories": ["education", "productivity", "utilities"],
-  "lang": "fr",
-  "dir": "ltr",
-  "scope": "/",
-  "icons": [
+  "version": 2,
+  "name": "etudia-main",
+  "rewrites": [
     {
-      "src": "/assets/icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/assets/icons/icon-512.png", 
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "source": "/api/(.*)",
+      "destination": "https://etudia-africa-v4-1.onrender.com/api/$1"
     }
   ],
-  "shortcuts": [
+  "redirects": [
     {
-      "name": "Connexion Rapide",
-      "short_name": "Login",
-      "description": "Accès rapide à votre espace ÉtudIA",
-      "url": "/login.html",
-      "icons": [{"src": "/assets/icons/login-96.png", "sizes": "96x96"}]
-    },
+      "source": "/admin",
+      "destination": "https://adminetudia.gsnexpertises.com",
+      "permanent": false
+    }
+  ],
+  "headers": [
     {
-      "name": "Interface IA",
-      "short_name": "IA",
-      "description": "Accès direct à l'interface IA complète",
-      "url": "https://adminetudia.gsnexpertises.com",
-      "icons": [{"src": "/assets/icons/ai-96.png", "sizes": "96x96"}]
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
     }
   ]
 }
