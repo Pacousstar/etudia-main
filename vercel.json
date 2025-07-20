@@ -1,3 +1,32 @@
 {
-  "version": 2
+  "version": 2,
+  "name": "etudia-main",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://etudia-africa-v4-1.onrender.com/api/$1"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/admin",
+      "destination": "https://adminetudia.gsnexpertises.com",
+      "permanent": false
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    }
+  ]
 }
